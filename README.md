@@ -1,28 +1,6 @@
 
 
-This is a [Next.js](https://nextjs.org/) boilerplate created following the  [React Avançado](https://reactavancado.com.br/) course.
-
-## What is inside?
-
-This project uses lot of stuff as:
-
-- [TypeScript](https://www.typescriptlang.org/)
-- [NextJS](https://nextjs.org/)
-- [Styled Components](https://styled-components.com/)
-- [Jest](https://jestjs.io/)
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- [Storybook](https://storybook.js.org/)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Husky](https://github.com/typicode/husky)
-
 ## Getting Started
-
-Create a new project using this boilerplate as an example:
-
-```bash
-yarn create next-app -e https://github.com/alangabrielbs/boilerplate-next
-```
 
 First, run the development server:
 
@@ -44,8 +22,6 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 - `lint`: runs the linter in all components and pages
 - `test`: runs jest to test all components and pages
 - `test:watch`: runs jest in watch mode
-- `storybook`: runs storybook on `localhost:6006`
-- `build-storybook`: create the build version of storybook
 
 ## Learn More
 
@@ -60,4 +36,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
