@@ -1,25 +1,23 @@
 import { signIn, signOut, useSession } from 'next-auth/client'
+import { FiX } from 'react-icons/fi'
+import { FaGoogle } from 'react-icons/fa'
+
 import * as S from './styles'
 
 const SignInButton = () => {
   const [session] = useSession()
-  console.log({ session })
 
   return session ? (
-    <button type="button" onClick={() => signOut()}>
-      {/* <FaGithub color="#04d361" /> */}
-      {session?.user?.name} | Sair
-      {/* <FiX color="#737380" className={styles.closeIcon} /> */}
-    </button>
+    <S.Button type="button" onClick={() => signOut()}>
+      {session.user?.image ? <img src={session.user.image} /> : <FaGoogle />}
+      {session?.user?.name}
+      <FiX color="#737380" className="closeIcon" />
+    </S.Button>
   ) : (
-    <button
-      type="button"
-      // className={styles.signInButton}
-      onClick={() => signIn('google')}
-    >
-      {/* <FaGithub color="#eba417" /> */}
-      Sign in with Google
-    </button>
+    <S.Button type="button" onClick={() => signIn('google')}>
+      <FaGoogle />
+      Fazer login com o Google
+    </S.Button>
   )
 }
 
