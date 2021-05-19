@@ -1,18 +1,19 @@
 import { GetServerSideProps } from 'next'
 import { getSession } from 'next-auth/client'
-import LoginTemplate from 'templates/Login'
 
-export default function Home() {
-  return <LoginTemplate />
+import DashboardTemplate from 'templates/Dashboard'
+
+export default function Dashboard() {
+  return <DashboardTemplate />
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const session = await getSession({ req })
 
-  if (session) {
+  if (!session) {
     return {
       redirect: {
-        destination: `/dashboard`,
+        destination: `/`,
         permanent: false
       }
     }

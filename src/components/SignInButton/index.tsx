@@ -11,7 +11,7 @@ const SignInButton = () => {
     <S.Button type="button" onClick={() => signOut()}>
       {session.user?.image ? <img src={session.user.image} /> : <FaGoogle />}
       {session?.user?.name}
-      <FiX color="#737380" className="closeIcon" />
+      <FiX color="#fff" className="closeIcon" />
     </S.Button>
   ) : (
     <S.Button type="button" onClick={() => signIn('google')}>
