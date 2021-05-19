@@ -1,11 +1,12 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { Provider as NextAuthProvider } from 'next-auth/client'
 
 import GlobalStyles from 'styles/GlobalStyles'
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <NextAuthProvider session={pageProps.session}>
       <Head>
         <title>React - Boilerplate</title>
         <meta
@@ -22,7 +23,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
-    </>
+    </NextAuthProvider>
   )
 }
 
